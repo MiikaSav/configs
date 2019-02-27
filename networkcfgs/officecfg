@@ -1,0 +1,14 @@
+# Security protocol
+# nmcli con modify Goffice 
+# Authtentication/EAP method: 
+nmcli con modify Goffice 802-1x.eap peap
+# PEAP version: automatic
+nmcli con modify Goffice 802-1x.phase1-peapver 0
+# Anonymous Identity: (none)
+# nmcli con modify Goffice 802-1x.anonymous-identity 
+# Inner authetication/Phase 2 authentication: MSCHAPv2
+nmcli con modify Goffice 802-1x.phase2-auth mschapv2
+# Certificate
+nmcli con modify Goffice 802-1x.ca-cert /home/miikas/.certs/gofdir1.intra.gofore.com_intra-GOFDIR1-CA.pem 
+# Identity
+nmcli con modify Goffice 802-1x.identity miika.savolainen@gofore.com
